@@ -1,0 +1,8 @@
+def all_subarrays(arr):
+    res = []
+    n = len(arr)
+    for i in range(n):
+        for j in range(i, n):
+            res.append(arr[i:j+1])
+    return res
+print(all_subarrays([1, 2, 3]))
