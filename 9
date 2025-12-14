@@ -1,0 +1,12 @@
+def make_equal(arr, k):
+    max_val = max(arr)
+    ops = 0
+    for x in arr:
+        diff = max_val - x
+        if diff % k != 0:
+            return -1
+        ops += diff // k
+    return ops
+print(make_equal([4, 7, 19, 16], 3))  
+print(make_equal([4, 4, 4, 4], 3))   
+print(make_equal([4, 2, 6, 8], 3))   
