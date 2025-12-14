@@ -1,0 +1,12 @@
+def move_zeros(arr):
+    k = 0  
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[k] = arr[i]
+            k += 1
+    for i in range(k, len(arr)):
+        arr[i] = 0
+    return arr
+print(move_zeros([1, 2, 0, 4, 3, 0, 5, 0]))
+print(move_zeros([10, 20, 30]))
+print(move_zeros([0, 0]))
