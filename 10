@@ -1,0 +1,9 @@
+def min_cost(arr):
+    arr.sort()
+    min_val = arr[0]
+    cost = 0
+    for i in range(1, len(arr)):
+        cost += min_val
+    return cost
+print(min_cost([4,3,2]))  
+print(min_cost([3,4]))   
