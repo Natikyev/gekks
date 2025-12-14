@@ -1,0 +1,8 @@
+def sum_of_subarrays(arr):
+    n = len(arr)
+    total = 0
+    for i in range(n):
+        total += arr[i] * (i + 1) * (n - i)
+    return total
+print(sum_of_subarrays([1, 4, 5, 3, 2]))  
+print(sum_of_subarrays([1, 2, 3, 4]))     
