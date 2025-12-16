@@ -1,0 +1,21 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+def remove_kth_node(head, k):
+    if k == 1:
+        return None  
+    current = head
+    prev = None
+    count = 1
+    while current:
+        if count == k:
+            prev.next = current.next  
+            count = 1
+        else:
+            prev = current
+            count += 1
+
+        current = current.next
+
+    return head
