@@ -1,0 +1,16 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+def count_occurrences(head, key):
+    count = 0
+    current = head
+
+    while current:
+        if current.data == key:
+            count += 1
+        current = current.next
+
+    return count
