@@ -23,3 +23,4 @@ def infix_to_postfix(s):
         result.append(stack.pop())
 
     return ''.join(result)
+#1
