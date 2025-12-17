@@ -1,0 +1,16 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def delete_at_beginning(last):
+    # Hal 1: siyahı boşdur
+    if last is None:
+        return None
+    if last.next == last:
+        return None
+ 3: birdən çox node var
+    head = last.next
+    last.next = head.next
+
+    return last
