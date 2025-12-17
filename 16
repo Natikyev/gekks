@@ -1,0 +1,13 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+def print_circular_list(head):
+    if head is None:
+        return
+    current = head
+    while True:
+        print(current.data, end=" ")
+        current = current.next
+        if current == head:
+            break
